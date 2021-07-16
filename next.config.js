@@ -38,7 +38,7 @@ module.exports = {
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://giphy.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://giphy.com vitals.vercel-insights.com;
   frame-src https://giphy.com;
   child-src https://giphy.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
