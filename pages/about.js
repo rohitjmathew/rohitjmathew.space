@@ -43,8 +43,8 @@ export default function About() {
         </h1>
         <div className="mb-8 prose leading-6 text-justify text-gray-600 dark:text-gray-400">
           <p>
-            Hey, I’m Rohit. I'm a developer, writer, musician, football fan and just a naturally curious person in life.
-            I work at McAfee as a SDE on their enterprise platform team working on building SecOps products. I'm also a 
+            Hey, I&apos;m Rohit. I&apos;m a developer, writer, musician, football fan and just a naturally curious person in life.
+            I work at McAfee as a SDE on their enterprise platform team working on building SecOps products. I&apos;m also a 
             Auth0 Ambassador working on sharing knowledge, tips, and best practices on topics relating to identity, security, 
             and authentication.
           </p>
@@ -54,7 +54,7 @@ export default function About() {
             I have done 7 internships during my undergraduate education culminating with my intership at HackerRank
           </p>
           <p>
-          If I'm not coding, I am generally:
+          If I&apos;m not coding, I am generally:
           <ul>
             <li>Staying up to date with the latest technological developments</li>
             <li>Binging Spotify playlists to find new unheard of artists</li>
@@ -81,7 +81,7 @@ export default function About() {
           title="Slack Notifier For Vaccine in India"
           link="https://github.com/rohitjmathew/vaccine-slack-notifier"
         >
-          Slack Notifier for India's 18+ Vaccine Appointment. This was a dockerised node application which would push 
+          Slack Notifier for India&apos;s 18+ Vaccine Appointment. This was a dockerised node application which would push 
           latest vaccine appointment details for Pincode Locations you provide to the provided slack channel.
         </Talk>
         <Talk

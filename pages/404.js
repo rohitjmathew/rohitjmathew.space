@@ -10,8 +10,8 @@ export default function NotFound() {
           ERROR!!! WHAT HAPPENED?
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
-          It seems you've found something that used to exist, or you spelled something
-          wrong. I'm guessing you spelled something wrong. Can you double check
+          It seems you&apos;ve found something that used to exist, or you spelled something
+          wrong. I&apos;m guessing you spelled something wrong. Can you double check
           that URL?
         </p>
         <Link href="/">
