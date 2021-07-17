@@ -78,7 +78,10 @@ export default function Container(props) {
             </svg>
           )}
         </button>
-        <div>
+        <button class="inline-block md:hidden w-10 h-10 bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-200 p-1">
+          <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className="w-8 h-5 text-gray-800 dark:text-gray-200"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div className="md:visible absolute md:relative top-20 left-0 md:top-0 z-20 flex flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-gray-100 dark:bg-gray-800 dark:md:bg-black dark:text-gray-100 shadow-md rounded-md md:rounded-none md:shadow-none md:bg-transparent p-6 pt-3 md:p-0">
           <NextLink href="/">
             <a className="p-1 text-gray-900 sm:p-4 dark:text-gray-100">Home</a>
           </NextLink>
