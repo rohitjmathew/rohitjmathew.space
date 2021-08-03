@@ -47,7 +47,7 @@
     "remark-frontmatter": "3.0.0",
     "remark-parse": "9.0.0",
     "remark-stringify": "9.0.1",
-    "unified": "9.2.1",
+    "unified": "10.1.0",
     "unist-util-visit": "4.0.0"
   },
   "prettier": {
