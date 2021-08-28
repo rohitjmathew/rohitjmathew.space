@@ -165,7 +165,7 @@ export default function About() {
           title="Dockerization"
           link="https://www.linkedin.com/posts/rohitjmathew_docker-deployment-microservices-activity-6592494174543667200-gekN"
         >
-          Spoke to the students of SRM University, Chennai on Dockerization and how we use docker in deployment pipleines at Turtlemint.
+          Spoke to the students of SRM University, Chennai on Dockerization and how we use docker in deployment pipelines at Turtlemint.
           This talk took place in October 2019.
         </Talk>
       </div>
