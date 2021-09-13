@@ -42,7 +42,7 @@
     "eslint-config-next": "11.1.2",
     "globby": "11.0.4",
     "image-size": "1.0.0",
-    "prettier": "2.3.2",
+    "prettier": "2.4.0",
     "rehype": "12.0.0",
     "remark-frontmatter": "4.0.0",
     "remark-parse": "10.0.0",
