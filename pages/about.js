@@ -44,7 +44,7 @@ export default function About() {
         <div className="mb-8 prose leading-6 text-justify text-gray-600 dark:text-gray-400">
           <p>
             Hey, I&apos;m Rohit. I&apos;m a developer, writer, musician, football fan and just a naturally curious person in life.
-            I work at McAfee as a SDE on their enterprise platform team working on building SecOps products. I&apos;m also an 
+            I work at McAfee Enterprise as a SDE on their platform team working on building SecOps products. I&apos;m also an 
             Auth0 Ambassador working on sharing knowledge, tips, and best practices on topics relating to identity, security, 
             and authentication.
           </p>
