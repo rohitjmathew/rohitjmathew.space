@@ -11,7 +11,7 @@ export default function Links({ children }) {
           Links
         </h1>
         <p className="text-gray-700 dark:text-gray-300 mt-2 mb-8">
-          Random compilation of links I have found interesting.
+          Random compilation of newsletters, podcasts, articles and videos I have found interesting.
         </p>
         <div className="prose dark:prose-dark w-full">{children}</div>
       </article>
