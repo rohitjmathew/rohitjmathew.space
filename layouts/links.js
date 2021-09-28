@@ -11,7 +11,10 @@ export default function Links({ children }) {
           Links
         </h1>
         <p className="text-gray-700 dark:text-gray-300 mt-2 mb-8">
-          Random compilation of newsletters, podcasts, articles and videos I have found interesting.
+          Random compilation of <a href="links#newsletters" className="underline text-blue-600 hover:text-blue-800">newsletters</a>
+          , <a href="links#podcasts" className="underline text-blue-600 hover:text-blue-800">podcasts</a>
+          , <a href="links#articles" className="underline text-blue-600 hover:text-blue-800">articles</a>
+          , and <a href="links#videos" className="underline text-blue-600 hover:text-blue-800">videos</a> I have found interesting.
         </p>
         <div className="prose dark:prose-dark w-full">{children}</div>
       </article>
