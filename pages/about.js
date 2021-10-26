@@ -70,6 +70,12 @@ export default function About() {
         </h2>
 
         <Talk
+          title="Earthly"
+          link="https://github.com/earthly/earthly"
+        >
+          Earthly is a syntax for defining your build. It works with your existing build system. Get repeatable and understandable builds today.
+        </Talk>
+        <Talk
           title="Sourabh Bajaj's Mac Setup Guide"
           link="https://sourabhbajaj.com/mac-setup"
         >
