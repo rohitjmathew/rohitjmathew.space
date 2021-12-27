@@ -34,7 +34,7 @@
     "remark-autolink-headings": "6.1.0",
     "remark-code-titles": "0.1.2",
     "remark-slug": "6.1.0",
-    "swr": "1.0.1",
+    "swr": "1.1.2",
     "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
