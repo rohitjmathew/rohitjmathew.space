@@ -44,7 +44,7 @@ export default function About() {
         <div className="mb-8 prose leading-6 text-justify text-gray-600 dark:text-gray-400">
           <p>
             Hey, I&apos;m Rohit. I&apos;m a developer, writer, musician, football fan and just a naturally curious person in life.
-            I work at McAfee Enterprise as a SDE on their platform team working on building SecOps products. I&apos;m also an 
+            I work at Trellix as a SDE on their platform team working on building SecOps products. I&apos;m also an 
             Auth0 Ambassador working on sharing knowledge, tips, and best practices on topics relating to identity, security, 
             and authentication.
           </p>
@@ -64,6 +64,18 @@ export default function About() {
           </ul>
           </p>
         </div>
+
+        <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
+          Videos
+        </h2>
+
+        <Talk
+          title="Enforce Multi-Factor Authentication for Specific Roles with Auth0 Actions"
+          link="https://youtu.be/P2REZ1Or3Cs"
+        >
+          Would you like to enforce certain roles within your application, for examples admins, to always use Multi-factor Authentication? 
+          Instead of forcing all or none, you can use a simple Auth0 Action to create this experience!
+        </Talk>
 
         <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
           Projects

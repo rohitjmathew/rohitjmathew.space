@@ -11,7 +11,7 @@ export default function UsesLayout({ children }) {
           My Gear
         </h1>
         <p className="text-gray-700 dark:text-gray-300 mt-2 mb-8">
-          Inspired by Uses This (<a href="https://usesthis.com/">usesthis.com</a>), the tools, services, and techniques I’m using to get things done. This is still a WIP.
+          Inspired by <a target="_blank" rel="noreferrer" className="text-blue-700 dark:text-blue-300" href="https://usesthis.com/">Uses This</a>, the tools, services, and techniques I’m using to get things done. This is still a WIP.
         </p>
         <div className="prose dark:prose-dark w-full">{children}</div>
       </article>

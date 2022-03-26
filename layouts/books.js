@@ -11,7 +11,11 @@ export default function BooksLayout({ children }) {
           Bookshelf
         </h1>
         <p className="text-gray-700 dark:text-gray-300 mt-2 mb-8">
-          My ever growing bookshelf which are mostly physical books. I find a different joy in reading a physical book with a glass of chai in my garden and have still not made the switch to a Kindle
+          My ever growing bookshelf which are mostly physical books as I haven't made the switch to a Kindle yet. 
+          Truthfully, I find a different joy in reading a physical book with a glass of chai in my garden. 
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mt-2 mb-8">
+          Other books I have read: <a target="_blank" rel="noreferrer" className="text-blue-700 dark:text-blue-300" href='https://www.goodreads.com/user/show/140566214-rohit-mathew'>GoodReads</a>.
         </p>
         <div className="prose dark:prose-dark w-full">{children}</div>
       </article>

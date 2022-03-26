@@ -11,10 +11,10 @@ export default function Links({ children }) {
           Links
         </h1>
         <p className="text-gray-700 dark:text-gray-300 mt-2 mb-8">
-          Random compilation of <a href="links#newsletters" className="underline text-blue-600 hover:text-blue-800">newsletters</a>
-          , <a href="links#podcasts" className="underline text-blue-600 hover:text-blue-800">podcasts</a>
-          , <a href="links#articles" className="underline text-blue-600 hover:text-blue-800">articles</a>
-          , and <a href="links#videos" className="underline text-blue-600 hover:text-blue-800">videos</a> I have found interesting.
+          I tweet every week with interesting things I find. You can find them <a target="_blank" rel="noreferrer" href="https://twitter.com/search?q=(%23RohitsWeeklyDiscovery)&src=typed_query&f=live" className="text-blue-700 dark:text-blue-300">here</a>.
+          You can see the full compilation of <a href="newsletters" className="text-blue-700 dark:text-blue-300">newsletters</a>
+          , <a href="podcasts" className="text-blue-700 dark:text-blue-300">podcasts</a>
+          , and <a href="links#articles" className="text-blue-700 dark:text-blue-300">articles</a> I have found interesting.<br/><br/> A few of recommendations are:
         </p>
         <div className="prose dark:prose-dark w-full">{children}</div>
       </article>
