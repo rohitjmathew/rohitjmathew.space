@@ -12,7 +12,7 @@ export default function Podcasts({ children }) {
                 </h1>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 mb-8">
                     Full compilation of podcasts I have found interesting.
-                    My recommendations can be found <a href="links" className="text-blue-700 dark:text-blue-300">here</a>.
+                    My recommendations can be found <a href="links#podcasts" className="text-blue-700 dark:text-blue-300">here</a>.
                 </p>
                 <div className="prose dark:prose-dark w-full">{children}</div>
             </article>
