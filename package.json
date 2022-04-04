@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "eslint": "^7.32.0",
-    "eslint-config-next": "12.1.1",
+    "eslint-config-next": "12.1.4",
     "globby": "11.0.4",
     "image-size": "1.0.1",
     "prettier": "2.6.1",
