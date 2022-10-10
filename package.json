@@ -27,7 +27,7 @@
     "next-themes": "^0.0.15",
     "planetscale-node": "^0.3.0",
     "postcss": "^8.4.12",
-    "preact": "^10.6.5",
+    "preact": "^10.11.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "reading-time": "1.5.0",
