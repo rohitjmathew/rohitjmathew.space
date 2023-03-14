@@ -55,13 +55,15 @@ export default function About() {
           </p>
           <p>
           If I&apos;m not coding, I am generally:
-          <ul>
-            <li>Staying up to date with the latest technological developments</li>
-            <li>Binging Spotify playlists to find new unheard of artists</li>
-            <li>Going for Gigs and Music Festivals</li>
-            <li>Playing/Watching Football</li>
-            <li>Attempting to not be an out of Practice Musician</li>
-          </ul>
+          <div>
+            <ul>
+              <li>Staying up to date with the latest technological developments</li>
+              <li>Binging Spotify playlists to find new unheard of artists</li>
+              <li>Going for Gigs and Music Festivals</li>
+              <li>Playing/Watching Football</li>
+              <li>Attempting to not be an out of Practice Musician</li>
+            </ul>
+          </div>
           </p>
         </div>
 
