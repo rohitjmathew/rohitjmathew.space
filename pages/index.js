@@ -18,7 +18,7 @@ export default function Home({ videos }) {
           A Software Engineer from India working on building SecOps products at <a target="_blank" rel="noreferrer" href="https://www.trellix.com/en-us/index.html">Trellix</a>.
           I am also an <a target="_blank" rel="noreferrer" href="https://auth0.com/ambassador-program">Auth0 Ambassador</a>, a former Senior Software Engineer at <a target="_blank" rel="noreferrer" href="https://www.turtlemint.com/">Turtlemint</a> and a former SDE Intern at <a target="_blank" rel="noreferrer" href="https://www.hackerrank.com/">HackerRank</a>.
           <br/><br/>
-          While my interests currently lie in the development of scalable solutions, DevOps, Developer Relations/Dev Evangelism as well as smart AI based system, I&apos;m excited by almost anything in tech.
+          While my interests currently lie in the development of scalable solutions, DevOps, Developer Relations as well as Cybersecurity, I&apos;m excited by almost anything in tech.
           <br/><br/>
           {`Come learn a bit more `}
           <Link href="/about">

@@ -66,6 +66,34 @@ export default function About() {
         </div>
 
         <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
+          Talks
+        </h2>
+
+        <Talk
+          title="Secure Yourself On The Internet"
+          link="https://twitter.com/iamrohitjmathew/status/1629020353224646657"
+        >
+          Spoke to the students of NPS Kalkere, Bangalore on how to secure themselves on the internet.
+          This talk took place in Feb 2023.
+        </Talk>
+
+        <Talk
+          title="How Does Signing & Validating a JSON Web Token (JWT) Work?"
+          link="https://twitter.com/iamrohitjmathew/status/1591460365082431489"
+        >
+          Spoke at the FOSS United Bangalore meetup on how does signing & validating a JSON Web Token (JWT) work.
+          This talk took place in November 2022.
+        </Talk>
+
+        <Talk
+          title="Dockerization"
+          link="https://www.linkedin.com/posts/rohitjmathew_docker-deployment-microservices-activity-6592494174543667200-gekN"
+        >
+          Spoke to the students of SRM University, Chennai on Dockerization and how we use docker in deployment pipelines at Turtlemint.
+          This talk took place in October 2019.
+        </Talk>
+
+        <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
           Videos
         </h2>
 
@@ -73,8 +101,31 @@ export default function About() {
           title="Enforce Multi-Factor Authentication for Specific Roles with Auth0 Actions"
           link="https://youtu.be/P2REZ1Or3Cs"
         >
-          Would you like to enforce certain roles within your application, for examples admins, to always use Multi-factor Authentication? 
+          Would you like to enforce certain roles within your application, for examples admins, to always use Multi-factor Authentication?
           Instead of forcing all or none, you can use a simple Auth0 Action to create this experience!
+        </Talk>
+
+        <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
+          Research Papers
+        </h2>
+
+        <Talk
+          title="Survey of Deep Learning Based Entertainment Oriented Recommendation Systems"
+          link="http://ijcsit.com/docs/Volume%2010/vol10issue04/ijcsit2019100401.pdf"
+        >
+          Published in International Journal of Computer Science and Information Technologies, 2019
+        </Talk>
+        <Talk
+          title="Predictive analysis using Big data Analytics for Sensors used in Fleet Truck Monitoring System"
+          link="http://www.enggjournals.com/ijet/docs/IJET16-08-02-308.pdf"
+        >
+          Published in  International Journal of Engineering and Technology, 2016
+        </Talk>
+        <Talk
+          title="Survey On Data Mining Algorithm"
+          link="http://www.ijcsit.com/docs/Volume%207/vol7issue1/ijcsit2016070166.pdf"
+        >
+          Published in  International Journal of Computer Science and Information Technologies, 2016
         </Talk>
 
         <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
@@ -152,40 +203,6 @@ export default function About() {
           A custom Slack integration for Hubot which responds to Jenkins notifications in a format appropriate for Slack attachments.
         </Talk>
 
-        <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
-          Research Papers
-        </h2>
-
-        <Talk
-          title="Survey of Deep Learning Based Entertainment Oriented Recommendation Systems"
-          link="http://ijcsit.com/docs/Volume%2010/vol10issue04/ijcsit2019100401.pdf"
-        >
-          Published in International Journal of Computer Science and Information Technologies, 2019
-        </Talk>
-        <Talk
-          title="Predictive analysis using Big data Analytics for Sensors used in Fleet Truck Monitoring System"
-          link="http://www.enggjournals.com/ijet/docs/IJET16-08-02-308.pdf"
-        >
-          Published in  International Journal of Engineering and Technology, 2016
-        </Talk>
-        <Talk
-          title="Survey On Data Mining Algorithm"
-          link="http://www.ijcsit.com/docs/Volume%207/vol7issue1/ijcsit2016070166.pdf"
-        >
-          Published in  International Journal of Computer Science and Information Technologies, 2016
-        </Talk>
-
-        <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
-          Talks
-        </h2>
-
-        <Talk
-          title="Dockerization"
-          link="https://www.linkedin.com/posts/rohitjmathew_docker-deployment-microservices-activity-6592494174543667200-gekN"
-        >
-          Spoke to the students of SRM University, Chennai on Dockerization and how we use docker in deployment pipelines at Turtlemint.
-          This talk took place in October 2019.
-        </Talk>
       </div>
     </Container>
   );
