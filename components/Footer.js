@@ -23,27 +23,24 @@ export default function Footer() {
           <ExternalLink href="https://twitter.com/iamrohitjmathew">
             Twitter
           </ExternalLink>
-          <ExternalLink href="https://github.com/rohitjmathew">GitHub</ExternalLink>
-          <ExternalLink href="https://www.linkedin.com/in/rohitjmathew/">
-            LinkedIn
-          </ExternalLink>
-        </div>
-        <div className="flex flex-col space-y-4">
-          <ExternalLink href="https://medium.com/@rohitjmathew">
-            Medium
-          </ExternalLink>
-          <ExternalLink href="https://dev.to/rohitjmathew">DEV</ExternalLink>
-          <ExternalLink href="https://tinyletter.com/teamix">
-            Teamix
-          </ExternalLink>
-        </div>
-        <div className="flex flex-col space-y-4">
           <ExternalLink href="https://open.spotify.com/user/21loszaq56ntdqmategugxofa?si=56YIorANSaeliPYWb5ulUQ">
             Spotify
           </ExternalLink>
-          <ExternalLink href="https://scholar.google.co.in/citations?user=7moht3YAAAAJ&hl=en">Google Scholar</ExternalLink>
-          <ExternalLink href="mailto:rohitjmathew+website@outlook.com">
-            Email
+        </div>
+        <div className="flex flex-col space-y-4">
+          <ExternalLink href="https://github.com/rohitjmathew">
+            GitHub
+          </ExternalLink>
+          <ExternalLink href="https://scholar.google.co.in/citations?user=7moht3YAAAAJ&hl=en">
+            Google Scholar
+          </ExternalLink>
+        </div>
+        <div className="flex flex-col space-y-4">
+          <ExternalLink href="https://www.linkedin.com/in/rohitjmathew/">
+            LinkedIn
+          </ExternalLink>
+          <ExternalLink href="https://tinyletter.com/teamix">
+            Teamix
           </ExternalLink>
         </div>
       </div>

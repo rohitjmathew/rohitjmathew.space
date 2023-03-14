@@ -23,7 +23,7 @@ export default function Container(props) {
   const router = useRouter();
   const meta = {
     title: 'Rohit Jacob Mathew',
-    description: `Software Engineer based in India. SDE at McAfee, Auth0 Ambassador & Ex Turtlemint & HackerRank`,
+    description: `Software Engineer based in India. SDE at Trellix, Auth0 Ambassador & Ex Turtlemint & HackerRank`,
     image: 'https://rohitjmathew.space/static/images/rohit.webp',
     type: 'website',
     ...customMeta
