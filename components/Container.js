@@ -52,6 +52,10 @@ export default function Container(props) {
         <a href="#skip" className="skip-nav">
           Skip to content
         </a>
+        <select value={resolvedTheme} onChange={e => setTheme(e.target.value)}>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
         <button
           aria-label="Toggle Dark Mode"
           type="button"
