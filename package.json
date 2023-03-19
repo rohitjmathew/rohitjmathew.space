@@ -26,7 +26,7 @@
     "next-mdx-remote": "^4.0.2",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.21",
-    "preact": "^10.13.1",
+    "preact": "^10.6.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "remark-autolink-headings": "6.1.0",

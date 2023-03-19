@@ -2822,7 +2822,7 @@
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
 
-"preact@^10.13.1":
+"preact@^10.6.5":
   "integrity" "sha512-KyoXVDU5OqTpG9LXlB3+y639JAGzl8JSBXLn1J9HTSB3gbKcuInga7bZnXLlxmK94ntTs1EFeZp0lrja2AuBYQ=="
   "resolved" "https://registry.npmjs.org/preact/-/preact-10.13.1.tgz"
   "version" "10.13.1"
