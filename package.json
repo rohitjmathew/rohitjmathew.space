@@ -45,7 +45,7 @@
     "@types/react-dom": "^18.3.7",
     "eslint": "^9.16.0",
     "eslint-config-next": "^16.1.1",
-    "globby": "^14.1.0",
+    "globby": "^16.1.0",
     "image-size": "^2.0.2",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2"
