@@ -1,12 +1,20 @@
-module.exports = {
-  future: {
-    strictPostcssConfiguration: true
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
+  turbopack: {}, // Add empty turbopack config for Next.js 16 compatibility
   images: {
-    domains: [
-      'i.scdn.co', // Spotify Album Art
-      'pbs.twimg.com' // Twitter Profile Picture
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        pathname: '/image/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        pathname: '/profile_images/**'
+      }
     ]
   },
   async headers() {
@@ -25,6 +33,8 @@ module.exports = {
     return config;
   }
 };
+
+module.exports = nextConfig;
 
 // https://securityheaders.com
 const ContentSecurityPolicy = `

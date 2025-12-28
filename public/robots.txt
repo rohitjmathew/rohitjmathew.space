@@ -1,2 +1,8 @@
 User-agent: *
+Allow: /
+
+# Block access to admin areas if they exist
+Disallow: /admin
+Disallow: /api
+
 Sitemap: https://rohitjmathew.space/sitemap.xml

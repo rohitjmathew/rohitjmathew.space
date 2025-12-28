@@ -1,9 +1,17 @@
-import { MDXRemote } from 'next-mdx-remote';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 import { getFileBySlug } from '@/lib/mdx';
 import BooksLayout from '@/layouts/books';
 
-export default function Bookshelf({ mdxSource, frontMatter }) {
+interface BookshelfProps {
+  mdxSource: MDXRemoteSerializeResult;
+  frontMatter: {
+    title?: string;
+    summary?: string;
+  };
+}
+
+export default function Bookshelf({ mdxSource, frontMatter }: BookshelfProps) {
   return (
     <BooksLayout frontMatter={frontMatter}>
       <MDXRemote {...mdxSource} />

@@ -1,23 +1,33 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-// log the pageview with their URL
-export const pageview = (url) => {
-  window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
-    page_path: url,
-  })
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
 }
 
+// log the pageview with their URL
+export const pageview = (url: string): void => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+      page_path: url,
+    });
+  }
+};
+
 // log specific events happening.
-export const event = ({ action, params }) => {
-  window.gtag('event', action, params)
-}
+export const event = ({ action, params }: { action: string; params: Record<string, unknown> }): void => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', action, params);
+  }
+};
 
 export const useAnalytics = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: string) => {
       pageview(url)
     }
     //When the component is mounted, subscribe to router changes

@@ -1,4 +1,10 @@
-export default function ErrorMessage({ children }) {
+import { ReactNode } from 'react';
+
+interface ErrorMessageProps {
+  children: ReactNode;
+}
+
+export default function ErrorMessage({ children }: ErrorMessageProps) {
   return (
     <p className="flex items-center text-sm font-bold text-red-800 dark:text-red-400">
       <svg

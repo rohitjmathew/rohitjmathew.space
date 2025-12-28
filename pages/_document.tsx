@@ -1,6 +1,10 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
   render() {
     return (
       <Html lang="en">
@@ -13,7 +17,11 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link href="/static/favicons/favicon.png" rel="shortcut icon" />
-          <link href="/static/favicons/site.webmanifest" rel="manifest" />
+          <link href="/manifest.json" rel="manifest" />
+          <meta name="theme-color" content="#000000" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+          <meta name="apple-mobile-web-app-title" content="Rohit Jacob Mathew" />
           <link
             href="/static/favicons/favicon.png"
             rel="apple-touch-icon"

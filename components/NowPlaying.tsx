@@ -2,8 +2,14 @@ import useSWR from 'swr';
 
 import fetcher from '@/lib/fetcher';
 
+interface NowPlayingData {
+  songUrl?: string;
+  title?: string;
+  artist?: string;
+}
+
 export default function NowPlaying() {
-  const { data } = useSWR('/api/now-playing', fetcher);
+  const { data }: { data?: NowPlayingData } = useSWR('/api/now-playing', fetcher);
 
   return (
     <div className="flex flex-row-reverse sm:flex-row mb-8 space-x-0 sm:space-x-2 w-full">

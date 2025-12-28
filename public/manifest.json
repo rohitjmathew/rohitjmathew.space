@@ -1,0 +1,21 @@
+{
+    "name": "Rohit Jacob Mathew",
+    "short_name": "RJM",
+    "description": "Staff SDE at Trellix | Passionate about Cloud Security & API Development | Ex Auth0 Ambassador, HackerRank & Turtlemint",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+        {
+            "src": "/static/favicons/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/favicons/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
