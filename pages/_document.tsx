@@ -16,40 +16,21 @@ class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <link href="/static/favicons/favicon.png" rel="shortcut icon" />
-          <link href="/manifest.json" rel="manifest" />
-          <meta name="theme-color" content="#000000" />
+
+          {/* Enhanced Favicon Setup */}
+          <link rel="icon" href="/static/favicons/favicon.png" sizes="any" />
+          <link rel="icon" href="/static/favicons/favicon.png" type="image/png" sizes="32x32" />
+          <link rel="icon" href="/static/favicons/favicon.png" type="image/png" sizes="16x16" />
+          <link rel="apple-touch-icon" href="/static/favicons/favicon.png" sizes="180x180" />
+          <link rel="manifest" href="/manifest.json" />
+
+          {/* Theme and PWA */}
+          <meta name="theme-color" content="#3B82F6" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-title" content="Rohit Jacob Mathew" />
-          <link
-            href="/static/favicons/favicon.png"
-            rel="apple-touch-icon"
-            sizes="180x180"
-          />
-          <link
-            href="/static/favicons/favicon.png"
-            rel="icon"
-            sizes="32x32"
-            type="image/png"
-          />
-          <link
-            href="/static/favicons/favicon.png"
-            rel="icon"
-            sizes="16x16"
-            type="image/png"
-          />
-          <link
-            color="#4a9885"
-            href="/static/favicons/favicon.png"
-            rel="mask-icon"
-          />
-          <meta content="#ffffff" name="theme-color" />
-          <meta content="#ffffff" name="msapplication-TileColor" />
-          <meta
-            content="/static/favicons/browserconfig.xml"
-            name="msapplication-config"
-          />
+          <meta name="msapplication-TileColor" content="#3B82F6" />
+          <meta name="msapplication-config" content="/static/favicons/browserconfig.xml" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}

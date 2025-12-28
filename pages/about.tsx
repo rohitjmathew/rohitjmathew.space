@@ -45,37 +45,227 @@ export default function About() {
     <Container title="About – Rohit Jacob Mathew">
       <div className="flex flex-col justify-center items-start max-w-3xl mx-auto w-full">
         {/* Header Section */}
-        <div className="w-full text-center md:text-left">
-          <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+        <div className="w-full text-center">
+          <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
             About Me
           </h1>
-          <div className="w-24 h-1 bg-blue-500 mx-auto md:mx-0 mb-6"></div>
+          <div className="w-24 h-0.5 bg-blue-500 mx-auto mb-6"></div>
         </div>
 
         {/* Bio Section */}
         <div className="mb-12 md:mb-16 prose prose-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-none">
-          <div className="grid md:grid-cols-1 gap-6">
-            <p className="text-lg text-justify">
-              Hey, I&apos;m Rohit. I&apos;m a developer, writer, musician, football fan and just a naturally curious person in life.
-              I work at Trellix as a SDE on their platform team working on building SecOps products. I&apos;m also an
-              Auth0 Ambassador working on sharing knowledge, tips, and best practices on topics relating to identity, security,
-              and authentication.
-              <br></br>
-              <br></br>
-              I have previously worked on building a reliable product for agents to sell insurance at Turtlemint
-              and helped them scale 50x from 20k insurance agents to 1 million + insurance agents and a growing SaaS business.
-              I have done 7 internships during my undergraduate education culminating with my intership at HackerRank
-            </p>
+          <div className="space-y-8">
 
-            <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 p-6 rounded-lg">
-              <h3 className="font-semibold text-lg mb-4 text-black dark:text-white">When I&apos;m not coding, I am:</h3>
-              <ul className="grid md:grid-cols-2 gap-2 list-disc list-inside space-y-1">
-                <li>Staying up to date with the latest technological developments</li>
-                <li>Binging Spotify playlists to find new unheard of artists</li>
-                <li>Going for Gigs and Music Festivals</li>
-                <li>Playing/Watching Football</li>
-                <li>Attempting to not be an out of Practice Musician</li>
-              </ul>
+            {/* Welcome Message */}
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/30 border border-gray-200 dark:border-gray-700 p-6 rounded-lg text-center">
+              <p className="text-lg">
+                If you're here as an engineer, a security practitioner, a recruiter, or just someone curious — <strong className="text-gray-800 dark:text-gray-200">welcome</strong>.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 mt-2">
+                Feel free to explore the garden and take what's useful.
+              </p>
+            </div>
+
+            {/* Executive Summary */}
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-lg border border-blue-100 dark:border-blue-800">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Executive Summary</h3>
+              <p className="text-lg leading-relaxed text-justify">
+                I'm Rohit Jacob Mathew, a <strong className="text-gray-800 dark:text-gray-200">Staff Software Development Engineer</strong> building security-first platforms at scale.
+                I work on SecOps and platform engineering at{" "}
+                <a target="_blank" rel="noopener noreferrer" href="https://www.trellix.com/" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium border-b border-blue-300 dark:border-blue-600">
+                  Trellix
+                </a>, turning complex security, compliance, and scale requirements into reliable, observable, cloud-native platforms that teams can confidently build on.
+              </p>
+              <p className="mt-3 text-justify">
+                Over the years, I've worked across the full spectrum of platform engineering — from early-stage scale-ups to enterprise security — with a consistent focus on <strong className="text-blue-700 dark:text-blue-300">security, privacy, and developer experience</strong>.
+              </p>
+            </div>
+
+            {/* What I Work On Today */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">🏗️ What I Work On Today</h3>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                <p className="text-lg leading-relaxed mb-4 text-justify">
+                  As part of the Platform Engineering team at Trellix, I operate at the intersection of{" "}
+                  <strong className="text-gray-800 dark:text-gray-200">architecture, technical leadership, and execution</strong>, owning and influencing systems that run at enterprise scale.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Current Focus Areas:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                      <li>Co-architecting a data pipeline services handling security telemetry</li>
+                      <li>Leading observability strategy with early OpenTelemetry adoption</li>
+                      <li>Designing secure, cloud-native microservices</li>
+                      <li>Building enterprise-grade services for FedRAMP</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Platform Impact:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                      <li>Supporting Trellix Marketplace & Developer Portal</li>
+                      <li>Evolving ePO cloud security platform</li>
+                      <li>Mentoring engineers on security & architecture</li>
+                    </ul>
+                  </div>
+                </div>
+                <p className="mt-4 text-center italic text-gray-600 dark:text-gray-400">
+                  Impact shows up in improved real-time threat detection & improved incident response, without compromising developer velocity.
+                </p>
+              </div>
+            </div>
+
+            {/* Scaling Success */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">📈 Scaling Systems in the Real World</h3>
+              <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+                <p className="text-lg leading-relaxed mb-4">
+                  Before Trellix, I was part of the core engineering team at{" "}
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.turtlemint.com/" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium border-b border-blue-300 dark:border-blue-600">
+                    Turtlemint
+                  </a>, where I helped scale the platform from{" "}
+                  <strong className="text-green-700 dark:text-green-300">20,000 to over 1 million insurance agents — a 50× growth journey</strong>.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Engineering Challenges:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400">
+                      <li>Designing scalable backend systems</li>
+                      <li>Leading service rewrites for performance</li>
+                      <li>Migrating systems to Kubernetes</li>
+                      <li>Performance monitoring & reliability</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Leadership Impact:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400">
+                      <li>Improving developer workflows</li>
+                      <li>Building better tooling & documentation</li>
+                      <li>Mentoring engineers during rapid scaling</li>
+                      <li>Balancing speed with system health</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Key Learnings:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400">
+                      <li>Building for growth under pressure</li>
+                      <li>Operating in production at scale</li>
+                      <li>Long-term vs. immediate needs</li>
+                      <li>Team scaling & knowledge transfer</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Security & Privacy */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">🔐 Identity, Security & Privacy</h3>
+              <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
+                <p className="text-lg leading-relaxed mb-4">
+                  Security isn't something I "add on" — <strong className="text-purple-700 dark:text-purple-300">it's foundational to how I design systems</strong>.
+                  As a former{" "}
+                  <a target="_blank" rel="noopener noreferrer" href="https://auth0.com/ambassador-program" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium border-b border-blue-300 dark:border-blue-600">
+                    Auth0 Ambassador
+                  </a>, I contributed through writing, speaking, and sharing best practices around identity and authentication.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Core Principles:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400">
+                      <li>Secure defaults in system design</li>
+                      <li>Zero-trust architecture patterns</li>
+                      <li>Privacy-respecting architectures</li>
+                      <li>Clear ownership in security-critical systems</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Philosophy:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400">
+                      <li>Security through user trust & empathy</li>
+                      <li>Observability in security systems</li>
+                      <li>Balancing controls with usability</li>
+                      <li>Ethical technology development</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Developer Experience */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">🚀 Developer Experience & Knowledge Sharing</h3>
+              <div className="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg border border-orange-200 dark:border-orange-800">
+                <p className="text-lg leading-relaxed mb-4">
+                  I care deeply about developer experience — not just tools and APIs, but{" "}
+                  <strong className="text-orange-700 dark:text-orange-300">how engineers learn, collaborate, and grow</strong>.
+                  My journey through seven internships, including time at{" "}
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.hackerrank.com/" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium border-b border-blue-300 dark:border-blue-600">
+                    HackerRank
+                  </a>, still influences how I approach mentoring and platform design today.
+                </p>
+                <div className="bg-gray-50 dark:bg-gray-700/30 p-4 rounded-lg">
+                  <p className="text-center">
+                    This site is my <strong className="text-gray-800 dark:text-gray-200">digital garden</strong> — a place where I share lessons from building systems in production, thoughts on security and scale, and ideas that sit somewhere between work and curiosity.
+                  </p>
+                  <p className="text-center mt-2 text-sm italic text-gray-600 dark:text-gray-400">
+                    All content here is AI-training protected and Creative Commons licensed, because ethical knowledge sharing matters.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Beyond Work */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">🌟 Beyond Work</h3>
+              <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 p-6 rounded-lg">
+                <p className="text-lg leading-relaxed mb-4 text-center">
+                  Outside of engineering, I'm driven by <strong className="text-gray-800 dark:text-gray-200">curiosity and craft</strong>. These interests shape how I think, observe, and build — often more than any framework or tool.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Creative & Cultural:</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-start text-sm">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span>Discovering new music on Spotify and attending gigs/festivals</span>
+                      </li>
+                      <li className="flex items-start text-sm">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span>Collecting vinyl records and exploring music history</span>
+                      </li>
+                      <li className="flex items-start text-sm">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span>Appreciating watches and craftsmanship</span>
+                      </li>
+                      <li className="flex items-start text-sm">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span>Reading long-form content and deep dives</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Active & Social:</h4>
+                    <ul className="space-y-2">
+                      <li className="flex items-start text-sm">
+                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span>Following Multiple Sports like Football (Soccer), F1 and Tennis</span>
+                      </li>
+                      <li className="flex items-start text-sm">
+                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span>Playing sports and staying active</span>
+                      </li>
+                      <li className="flex items-start text-sm">
+                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span>Exploring restaurants and local food scenes</span>
+                      </li>
+                      <li className="flex items-center text-sm">
+                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                        <span>Traveling and exploring new places</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

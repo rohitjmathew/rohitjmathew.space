@@ -37,7 +37,7 @@ export default function Container({ children, ...customMeta }: ContainerProps) {
   const router = useRouter();
   const meta: Meta = {
     title: 'Rohit Jacob Mathew',
-    description: `Software Engineer based in India. SDE at Trellix, Auth0 Ambassador & Ex Turtlemint & HackerRank`,
+    description: `Staff Software Engineer building secure, scalable SecOps platforms at Trellix, sharing insights on security, privacy, systems, and life beyond code.`,
     image: 'https://rohitjmathew.space/static/images/rohit.webp',
     type: 'website',
     ...customMeta
@@ -49,18 +49,46 @@ export default function Container({ children, ...customMeta }: ContainerProps) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
+        <meta name="keywords" content="Rohit Jacob Mathew, Software Engineer, Trellix, SecOps, DevOps, Cybersecurity, Auth0 Ambassador, India, Staff Engineer" />
+        <meta name="author" content="Rohit Jacob Mathew" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Enhanced Open Graph tags */}
         <meta property="og:url" content={`https://rohitjmathew.space${router.asPath}`} />
-        <link rel="canonical" href={`https://rohitjmathew.space${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Rohit Jacob Mathew" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Rohit Jacob Mathew - Staff Software Development Engineer" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Enhanced Twitter tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@iamrohitjmathew" />
+        <meta name="twitter:creator" content="@iamrohitjmathew" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
+        <meta name="twitter:image:alt" content="Rohit Jacob Mathew - Staff Software Development Engineer" />
+
+        {/* Performance and SEO */}
+        <link rel="canonical" href={`https://rohitjmathew.space${router.asPath}`} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://i.scdn.co" />
+
+        {/* Creative Commons License */}
+        <meta name="DC.rights" content="https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+        <meta name="license" content="https://creativecommons.org/licenses/by-nc-sa/4.0/" />
+
+        {/* AI Training Opt-out */}
+        <meta name="robots" content="noai, noimageai" />
+        <meta name="AI-generated" content="false" />
+
+        {/* Additional structured data hint */}
+        <meta name="theme-color" content="#3B82F6" />
       </Head>
       <nav className="fixed md:sticky bottom-0 md:top-0 left-0 right-0 flex items-center justify-between w-full max-w-4xl p-3 md:px-6 lg:px-8 md:py-6 lg:py-8 mx-auto text-gray-900 bg-slate-50 dark:bg-gray-800 md:bg-slate-50/80 md:dark:bg-gray-900/80 md:backdrop-blur-md border-t md:border-t-0 border-gray-200 dark:border-gray-600 md:border-none shadow-lg md:shadow-none z-40 dark:text-gray-100">
         <a href="#skip" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 rounded">

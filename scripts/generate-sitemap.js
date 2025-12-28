@@ -53,12 +53,30 @@ const prettier = require('prettier');
           .replace('pages', '')
           .replace('data', '')
           .replace('.js', '')
+          .replace('.tsx', '')
+          .replace('.ts', '')
           .replace('.mdx', '');
         const route = path === '/index' ? '' : path;
+
+        // Define priority and change frequency based on page type
+        let priority = '0.6';
+        let changefreq = 'monthly';
+
+        if (route === '') {
+          priority = '1.0';
+          changefreq = 'weekly';
+        } else if (route === '/about') {
+          priority = '0.8';
+          changefreq = 'monthly';
+        } else if (route === '/links') {
+          changefreq = 'weekly';
+        }
 
         return `
                         <url>
                             <loc>${`https://rohitjmathew.space${route}`}</loc>
+                            <changefreq>${changefreq}</changefreq>
+                            <priority>${priority}</priority>
                         </url>
                     `;
       })
