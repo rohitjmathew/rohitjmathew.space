@@ -1,0 +1,21 @@
+{
+    "name": "Rohit Jacob Mathew",
+    "short_name": "RJM",
+    "description": "Staff Software Development Engineer at Trellix | SecOps, DevOps & Cybersecurity Expert | Personal Brand & Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#3B82F6",
+    "icons": [
+        {
+            "src": "/static/favicons/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/favicons/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,12 +1,20 @@
-module.exports = {
-  future: {
-    strictPostcssConfiguration: true
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
+  poweredByHeader: false,
+  turbopack: {}, // Add empty turbopack config for Next.js 16 compatibility
   images: {
-    domains: [
-      'i.scdn.co', // Spotify Album Art
-      'pbs.twimg.com' // Twitter Profile Picture
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.scdn.co',
+        pathname: '/image/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        pathname: '/profile_images/**'
+      }
     ]
   },
   async headers() {
@@ -26,17 +34,18 @@ module.exports = {
   }
 };
 
+module.exports = nextConfig;
+
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://giphy.com vitals.vercel-insights.com https://www.googletagmanager.com/gtag/js;
-  frame-src https://giphy.com;
-  child-src https://giphy.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src * blob: data:;
-  media-src 'none';
-  connect-src *;
-  font-src 'self';
+  media-src 'self' https://i.scdn.co;
+  connect-src * https://api.spotify.com;
+  font-src 'self' *.googleapis.com *.gstatic.com;
+  object-src 'none';
 `;
 
 const securityHeaders = [
@@ -70,10 +79,9 @@ const securityHeaders = [
     key: 'Strict-Transport-Security',
     value: 'max-age=31536000; includeSubDomains; preload'
   },
-  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
-  // Opt-out of Google FLoC: https://amifloced.org/
+  // Opt-out of tracking
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+    value: 'camera=(), microphone=(), geolocation=()'
   }
 ];

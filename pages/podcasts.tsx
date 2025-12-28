@@ -1,9 +1,17 @@
-import { MDXRemote } from 'next-mdx-remote';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 import { getFileBySlug } from '@/lib/mdx';
 import Podcasts from '@/layouts/podcasts';
 
-export default function LinksPage({ mdxSource, frontMatter }) {
+interface PodcastsPageProps {
+    mdxSource: MDXRemoteSerializeResult;
+    frontMatter: {
+        title?: string;
+        summary?: string;
+    };
+}
+
+export default function LinksPage({ mdxSource, frontMatter }: PodcastsPageProps) {
     return (
         <Podcasts frontMatter={frontMatter}>
             <MDXRemote {...mdxSource} />

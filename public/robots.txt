@@ -1,2 +1,52 @@
 User-agent: *
+Allow: /
+
+# Block API endpoints
+Disallow: /api
+
+# AI/LLM Training Bots - Block for privacy
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Allow legitimate search engines and social media
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# SEO: Important files
 Sitemap: https://rohitjmathew.space/sitemap.xml
+
+# Crawl rate for politeness
+Crawl-delay: 2
