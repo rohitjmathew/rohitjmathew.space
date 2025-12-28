@@ -1,23 +1,43 @@
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { event } from './analytics';
 
 function sendToAnalytics(metric: any) {
-    // You can send to Google Analytics, console, or any analytics service
-    console.log(metric);
-
-    // Example: Send to Google Analytics 4 (when gtag is available)
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', metric.name, {
-            custom_parameter_1: metric.value,
-            custom_parameter_2: metric.id,
-            custom_parameter_3: metric.delta
+    // Log for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+        console.log(`[Web Vitals] ${metric.name}:`, {
+            value: metric.value,
+            id: metric.id,
+            delta: metric.delta,
+            rating: metric.rating
         });
+    }
+
+    // Send to Google Analytics 4 with proper error handling
+    try {
+        event({
+            action: metric.name,
+            params: {
+                metric_id: metric.id,
+                metric_value: metric.value,
+                metric_delta: metric.delta,
+                metric_rating: metric.rating,
+                custom_map: {
+                    metric_1: 'metric_value'
+                }
+            }
+        });
+    } catch (error) {
+        console.warn('[Analytics] Failed to send web vitals:', error);
     }
 }
 
 export function reportWebVitals() {
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics); // FID has been replaced with INP (Interaction to Next Paint)
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
+    // Only track web vitals if analytics is configured
+    if (process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS) {
+        onCLS(sendToAnalytics);
+        onINP(sendToAnalytics); // Interaction to Next Paint (replaces FID)
+        onFCP(sendToAnalytics);
+        onLCP(sendToAnalytics);
+        onTTFB(sendToAnalytics);
+    }
 }

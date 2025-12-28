@@ -31,22 +31,41 @@ class MyDocument extends Document {
           <meta name="apple-mobile-web-app-title" content="Rohit Jacob Mathew" />
           <meta name="msapplication-TileColor" content="#3B82F6" />
           <meta name="msapplication-config" content="/static/favicons/browserconfig.xml" />
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
+          {/* Privacy-First Google Analytics 4 */}
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                      page_path: window.location.pathname,
+                      anonymize_ip: true,
+                      allow_ad_personalization_signals: false,
+                      allow_google_signals: false,
+                      cookie_flags: 'SameSite=Strict;Secure',
+                      cookie_expires: 28 * 24 * 60 * 60, // 28 days
+                      storage: 'none', // Disable GA storage
+                      client_storage: 'none'
+                    });
+                    
+                    // Disable all advertising features
+                    gtag('set', {
+                      ads_data_redaction: true,
+                      allow_ad_personalization_signals: false
+                    });
+                  `,
+                }}
+              />
+            </>
+          )}
         </Head>
         <body className="bg-white dark:bg-black text-white dark:text-black">
           <Main />
