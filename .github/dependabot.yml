@@ -59,8 +59,6 @@ updates:
     labels:
       - "dependencies"
       - "automated"
-    # Auto-merge patch updates for low-risk dependencies
-    auto-merge: false
     # Commit message preferences
     commit-message:
       prefix: "chore"
