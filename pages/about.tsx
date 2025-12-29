@@ -223,45 +223,21 @@ export default function About() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Creative & Cultural:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start text-sm">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <span>Discovering new music on Spotify and attending gigs/festivals</span>
-                      </li>
-                      <li className="flex items-start text-sm">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <span>Collecting vinyl records and exploring music history</span>
-                      </li>
-                      <li className="flex items-start text-sm">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <span>Appreciating watches and craftsmanship</span>
-                      </li>
-                      <li className="flex items-start text-sm">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <span>Reading long-form content and deep dives</span>
-                      </li>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Creative & Cultural:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                      <li>Discovering new music on Spotify and attending gigs/festivals</li>
+                      <li>Collecting vinyl records and exploring music history</li>
+                      <li>Appreciating watches and craftsmanship</li>
+                      <li>Reading long-form content and deep dives</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">Active & Social:</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start text-sm">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <span>Following Multiple Sports like Football (Soccer), F1 and Tennis</span>
-                      </li>
-                      <li className="flex items-start text-sm">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <span>Playing sports and staying active</span>
-                      </li>
-                      <li className="flex items-start text-sm">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                        <span>Exploring restaurants and local food scenes</span>
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
-                        <span>Traveling and exploring new places</span>
-                      </li>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Active & Social:</h4>
+                    <ul className="space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                      <li>Following Multiple Sports like Football (Soccer), F1 and Tennis</li>
+                      <li>Playing sports and staying active</li>
+                      <li>Exploring restaurants and local food scenes</li>
+                      <li>Traveling and exploring new places</li>
                     </ul>
                   </div>
                 </div>
