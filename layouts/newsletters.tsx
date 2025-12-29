@@ -38,7 +38,7 @@ export default function Newsletters({ children, frontMatter }: NewslettersProps)
                 </div>
 
                 {/* Content Section */}
-                <div className="prose prose-lg dark:prose-invert w-full max-w-none">
+                <div className="prose prose-lg dark:prose-invert w-full max-w-none mt-12">
                     <div className="[&>h2]:font-bold [&>h2]:text-2xl [&>h2]:md:text-3xl [&>h2]:tracking-tight [&>h2]:mb-6 [&>h2]:text-black [&>h2]:dark:text-white [&>h2>a]:text-black [&>h2>a]:dark:text-white [&>h2>a]:no-underline [&>h2>a]:font-bold [&>h2>a]:hover:text-black [&>h2>a]:dark:hover:text-white [&>h3]:font-semibold [&>h3]:text-lg [&>h3]:mb-4 [&>h3]:text-black [&>h3]:dark:text-white [&>h3>a]:text-black [&>h3>a]:dark:text-white [&>h3>a]:no-underline [&>h3>a]:font-semibold [&>h3>a]:hover:text-black [&>h3>a]:dark:hover:text-white [&>ul]:grid [&>ul]:gap-2 [&>ul]:list-none [&>ul]:p-0 [&>ul>li]:bg-white [&>ul>li]:dark:bg-gray-800/50 [&>ul>li]:p-6 [&>ul>li]:rounded-lg [&>ul>li]:shadow-sm [&>ul>li]:border [&>ul>li]:border-gray-100 [&>ul>li]:dark:border-gray-700 [&>ul>li]:hover:shadow-md [&>ul>li]:transition-shadow [&>ul>li]:duration-200 [&>ul>li>a]:text-blue-600 [&>ul>li>a]:dark:text-blue-400 [&>ul>li>a]:hover:text-blue-700 [&>ul>li>a]:dark:hover:text-blue-300 [&>ul>li>a]:transition-colors [&>ul>li>a]:font-medium [&>ul>li>a]:no-underline">
                         {children}
                     </div>
