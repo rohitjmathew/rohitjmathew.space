@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Head from 'next/head';
 import Container from '../components/Container';
 import { GetStaticProps } from 'next';

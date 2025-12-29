@@ -29,7 +29,7 @@ test.describe('Navigation and Routing Tests', () => {
             // Check for 404 content or error handling
             const pageContent = await page.textContent('body');
             expect(pageContent).toMatch(/404|not found|page not found/i);
-        } catch (error) {
+        } catch {
             // If timeout, just check if we can access the 404 page directly
             await page.goto('/404');
             const pageContent = await page.textContent('body');

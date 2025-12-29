@@ -1,7 +1,7 @@
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 import { event } from './analytics';
 
-function sendToAnalytics(metric: any) {
+function sendToAnalytics(metric: Metric) {
     // Log for debugging in development
     if (process.env.NODE_ENV === 'development') {
         console.log(`[Web Vitals] ${metric.name}:`, {

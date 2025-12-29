@@ -73,6 +73,63 @@ Content on this site is licensed under [CC BY-NC-SA 4.0](https://creativecommons
 └── styles/             # Global CSS and Tailwind config
 ```
 
+## 🧪 Testing
+
+**Docker-only testing** for 100% OS-independent results across all browsers and devices.
+
+### Quick Commands
+```bash
+# Run all 200 tests (40 test cases × 5 browsers) in parallel
+npm test
+
+# Run visual regression tests only (Chrome)
+npm run test:visual
+
+# Update visual test screenshots  
+npm run test:visual:update
+
+# View detailed HTML test report
+npm run test:report
+```
+
+### Test Coverage
+- **200 Total Executions**: 40 test cases across 5 browsers (Chrome, Firefox, Safari, Mobile Chrome, Mobile Safari)
+- **Parallel Execution**: 4 workers for faster results (~2.6 minutes total)
+- **OS Independent**: Docker ensures consistent rendering on macOS, Windows, Linux
+- **CI/CD Ready**: Automated testing in GitHub Actions
+
+### Test Categories
+
+#### Functional Tests (30 tests)
+- **Homepage**: Core functionality, navigation, external links
+- **About Page**: Content structure, responsive design, card layouts
+- **Resource Pages**: MDX content rendering, consistent styling  
+- **Navigation**: Internal/external links, 404 handling
+- **Performance**: Core Web Vitals, accessibility, SEO
+- **API Integration**: Spotify API handling, graceful failures
+
+#### Visual Tests (10 tests)  
+- **Cross-page Screenshots**: All main pages
+- **Responsive Design**: Mobile viewports and layouts
+- **Dark Mode**: Theme switching consistency
+- **404 Page**: Error page styling
+
+### Docker Architecture
+- **Why Docker-only?** Zero OS dependencies, consistent font rendering, no "works on my machine" issues
+- **How it works:** Builds Next.js app in Ubuntu container → starts server → runs 200 tests in parallel → generates reports
+- **File Structure:**
+  ```
+  ├── Dockerfile                    # Test environment setup
+  ├── playwright.docker.config.ts   # Test configuration  
+  ├── scripts/test-docker.sh        # Test runner script
+  └── tests/                        # Test suites (40 test cases)
+  ```
+
+### Troubleshooting
+- **Tests fail with timeout:** Increase timeout in `playwright.docker.config.ts`
+- **Visual tests fail:** Run `npm run test:visual:update` to regenerate screenshots  
+- **CI/CD issues:** Check GitHub Actions logs for Docker build errors
+
 ## 🙏 Acknowledgments
 
 Special thanks to [Lee Robinson](https://leerob.io/) whose open-source website provided inspiration and foundational patterns for this project.

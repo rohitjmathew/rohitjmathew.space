@@ -93,3 +93,22 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
+
+  # Enable version updates for Docker base images
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "10:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 3
+    assignees:
+      - "rohitjmathew"
+    labels:
+      - "docker"
+      - "dependencies"
+      - "security"
+    commit-message:
+      prefix: "docker"
+      include: "scope"
