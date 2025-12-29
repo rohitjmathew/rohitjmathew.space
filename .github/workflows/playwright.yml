@@ -1,50 +1,68 @@
-name: Playwright Tests
+name: Full Test Suite
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
   workflow_dispatch:
 
 env:
-  # Force color output in GitHub Actions
   FORCE_COLOR: 1
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip ci]')
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
     
+    - name: Cache Docker layers
+      uses: actions/cache@v4
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-
+    
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
-      
-    - name: Build test environment
-      run: |
-        echo "🐳 Building Docker test environment..."
-        docker build -t playwright-tests .
+      with:
+        driver-opts: network=host
         
-    - name: Run Playwright tests
+    - name: Build test environment (cached)
       run: |
-        echo "🧪 Running all 200 tests in parallel..."
+        echo "🐳 Building comprehensive test environment..."
+        docker build \
+          --cache-from type=local,src=/tmp/.buildx-cache \
+          --cache-to type=local,dest=/tmp/.buildx-cache-new,mode=max \
+          -t playwright-tests .
+        rm -rf /tmp/.buildx-cache
+        mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+        
+    - name: Run comprehensive test suite
+      run: |
+        echo "🧪 Running full test suite (functional + visual regression)..."
+        echo "📸 This includes UI/visual regression testing for personal site updates"
         chmod +x ./scripts/test-docker.sh
         ./scripts/test-docker.sh
         
     - name: Upload test results
       uses: actions/upload-artifact@v4
-      if: always()
+      if: failure()
       with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 7
+        name: test-failures-${{ github.sha }}
+        path: |
+          playwright-report/
+          test-results/
+        retention-days: 5
         
-    - name: Upload test artifacts
+    - name: Upload visual diff artifacts
       uses: actions/upload-artifact@v4
-      if: always()
+      if: failure()
       with:
-        name: test-results
-        path: test-results/
-        retention-days: 7
+        name: visual-diffs-${{ github.sha }}
+        path: test-results/**/test-failed-*.png
+        retention-days: 5

@@ -7,51 +7,29 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       day: "monday"
       time: "09:00"
       timezone: "UTC"
-    # Limit the number of open pull requests
-    open-pull-requests-limit: 10
-    # Group dependency updates to reduce PR noise
+    # Minimize GitHub Actions usage
+    open-pull-requests-limit: 5
+    # Group dependency updates to reduce PR noise and Actions usage
     groups:
-      # Group all patch updates together
-      patch-updates:
+      # Group all non-major updates together
+      minor-and-patch:
         patterns:
           - "*"
         update-types:
           - "patch"
-      # Group all minor updates for React ecosystem
-      react-ecosystem:
-        patterns:
-          - "react*"
-          - "@types/react*"
-        update-types:
           - "minor"
-      # Group all minor updates for Next.js ecosystem
-      nextjs-ecosystem:
+      # Group dev dependencies separately
+      dev-dependencies:
         patterns:
-          - "next*"
-          - "@next/*"
+          - "*"
+        dependency-type: "development"
         update-types:
-          - "minor"
-      # Group all TypeScript related updates
-      typescript-ecosystem:
-        patterns:
-          - "typescript"
-          - "@types/*"
-        update-types:
-          - "minor"
-      # Group all linting and formatting tools
-      dev-tools:
-        patterns:
-          - "eslint*"
-          - "@eslint/*"
-          - "prettier*"
-          - "@typescript-eslint/*"
-        update-types:
-          - "minor"
           - "patch"
+          - "minor"
     # Assignees for dependency PRs
     assignees:
       - "rohitjmathew"
