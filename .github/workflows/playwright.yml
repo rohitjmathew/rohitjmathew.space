@@ -19,37 +19,40 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     
-    - name: Cache Docker layers
-      uses: actions/cache@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
-        path: /tmp/.buildx-cache
-        key: ${{ runner.os }}-buildx-${{ github.sha }}
-        restore-keys: |
-          ${{ runner.os }}-buildx-
-    
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
-      with:
-        driver: docker-container
-        driver-opts: network=host
+        node-version: '24'
+        cache: 'npm'
         
-    - name: Build test environment (cached)
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
+      
+    - name: Build application
+      run: npm run build
+      
+    - name: Start server and run tests
       run: |
-        echo "🐳 Building comprehensive test environment..."
-        docker buildx build \
-          --cache-from type=local,src=/tmp/.buildx-cache \
-          --cache-to type=local,dest=/tmp/.buildx-cache-new,mode=max \
-          --load \
-          -t playwright-tests .
-        rm -rf /tmp/.buildx-cache
-        mv /tmp/.buildx-cache-new /tmp/.buildx-cache
-        
-    - name: Run comprehensive test suite
-      run: |
-        echo "🧪 Running full test suite (functional + visual regression)..."
-        echo "📸 This includes UI/visual regression testing for personal site updates"
-        chmod +x ./scripts/test-docker.sh
-        ./scripts/test-docker.sh
+        echo "🧪 Running comprehensive test suite on GitHub runner..."
+        npm start &
+        SERVER_PID=$!
+        echo "⏳ Waiting for server to be ready..."
+        for i in {1..60}; do
+          if curl -f http://localhost:3000 >/dev/null 2>&1; then
+            echo "✅ Server ready! Running Playwright tests..."
+            npx playwright test
+            TEST_EXIT_CODE=$?
+            kill $SERVER_PID 2>/dev/null || true
+            exit $TEST_EXIT_CODE
+          fi
+          sleep 1
+        done
+        echo "❌ Server failed to start within 60 seconds"
+        kill $SERVER_PID 2>/dev/null || true
+        exit 1
         
     - name: Upload test results
       uses: actions/upload-artifact@v4
