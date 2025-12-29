@@ -25,7 +25,7 @@ const nextConfig = {
       }
     ];
   },
-  webpack: (config, { dev, isServer }) => {
+  webpack: (config, { isServer }) => {
     if (isServer) {
       require('./scripts/generate-sitemap');
     }

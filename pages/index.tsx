@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Head from 'next/head';
 import Container from '../components/Container';
 import { GetStaticProps } from 'next';
@@ -46,7 +45,7 @@ export default function Home() {
         "name": "Turtlemint"
       }
     ],
-    "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
   };
 
   return (

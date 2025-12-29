@@ -32,7 +32,10 @@ export default function Container({ children, ...customMeta }: ContainerProps) {
   };
 
   // After mounting, we have access to the theme
-  useEffect(() => setMounted(true), []);
+  // This is a legitimate hydration pattern for theme handling
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const router = useRouter();
   const meta: Meta = {

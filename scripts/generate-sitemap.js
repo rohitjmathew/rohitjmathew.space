@@ -89,6 +89,6 @@ const prettier = require('prettier');
     parser: 'html'
   });
 
-  // eslint-disable-next-line no-sync
+   
   fs.writeFileSync('public/sitemap.xml', formatted);
 })();
