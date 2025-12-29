@@ -91,16 +91,16 @@ export default function Home() {
 
               <div className="text-left space-y-4">
                 <p className="text-lg leading-relaxed text-justify">
-                  I work on SecOps and platform engineering at{" "}
+                  I work in SecOps and platform engineering at{" "}
                   <a target="_blank" rel="noreferrer" href="https://www.trellix.com/" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium border-b border-blue-300 dark:border-blue-600">
                     Trellix
-                  </a>, supporting systems used by Fortune 500 companies and federal organizations. I'm also a former{" "}
+                  </a>, supporting systems used by Fortune 500 companies and federal organizations. I’m a former{" "}
                   <a target="_blank" rel="noreferrer" href="https://auth0.com/ambassador-program" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium border-b border-blue-300 dark:border-blue-600">
                     Auth0 Ambassador
-                  </a>. Previously, I helped scale{" "}
+                  </a>, and previously helped scale{" "}
                   <a target="_blank" rel="noreferrer" href="https://www.turtlemint.com/" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium border-b border-blue-300 dark:border-blue-600">
                     Turtlemint
-                  </a>{" "}from 20k to 1M+ users, and earlier interned at{" "}
+                  </a>{" "}from 20k to 1M+ users. Earlier in my career, I interned at{" "}
                   <a target="_blank" rel="noreferrer" href="https://www.hackerrank.com/" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors font-medium border-b border-blue-300 dark:border-blue-600">
                     HackerRank
                   </a>.
