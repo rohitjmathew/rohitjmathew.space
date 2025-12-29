@@ -168,26 +168,6 @@ export default function About() {
                     Auth0 Ambassador
                   </a>, I contributed through writing, speaking, and sharing best practices around identity and authentication.
                 </p>
-                <div className="grid md:grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Core Principles:</h4>
-                    <ul className="space-y-1 text-gray-600 dark:text-gray-400">
-                      <li>Secure defaults in system design</li>
-                      <li>Zero-trust architecture patterns</li>
-                      <li>Privacy-respecting architectures</li>
-                      <li>Clear ownership in security-critical systems</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Philosophy:</h4>
-                    <ul className="space-y-1 text-gray-600 dark:text-gray-400">
-                      <li>Security through user trust & empathy</li>
-                      <li>Observability in security systems</li>
-                      <li>Balancing controls with usability</li>
-                      <li>Ethical technology development</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -234,7 +214,7 @@ export default function About() {
                   <div>
                     <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Active & Social:</h4>
                     <ul className="space-y-1 text-gray-600 dark:text-gray-400 text-sm">
-                      <li>Following Multiple Sports like Football (Soccer), F1 and Tennis</li>
+                      <li>Following multiple sports like football (soccer), F1 and tennis</li>
                       <li>Playing sports and staying active</li>
                       <li>Exploring restaurants and local food scenes</li>
                       <li>Traveling and exploring new places</li>
