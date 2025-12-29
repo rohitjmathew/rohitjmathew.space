@@ -34,25 +34,10 @@ jobs:
     - name: Build application
       run: npm run build
       
-    - name: Start server and run tests
+    - name: Run Playwright tests
       run: |
         echo "🧪 Running comprehensive test suite on GitHub runner..."
-        npm start &
-        SERVER_PID=$!
-        echo "⏳ Waiting for server to be ready..."
-        for i in {1..60}; do
-          if curl -f http://localhost:3000 >/dev/null 2>&1; then
-            echo "✅ Server ready! Running Playwright tests..."
-            npx playwright test
-            TEST_EXIT_CODE=$?
-            kill $SERVER_PID 2>/dev/null || true
-            exit $TEST_EXIT_CODE
-          fi
-          sleep 1
-        done
-        echo "❌ Server failed to start within 60 seconds"
-        kill $SERVER_PID 2>/dev/null || true
-        exit 1
+        npx playwright test
         
     - name: Upload test results
       uses: actions/upload-artifact@v4
