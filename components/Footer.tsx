@@ -69,8 +69,8 @@ export default function Footer() {
             </p>
             <div className="text-xs">
               Content licensed under{" "}
-              <ExternalLink href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className="text-xs">
-                CC BY-NC-SA 4.0
+              <ExternalLink href="https://creativecommons.org/licenses/by-nc-nd/4.0/" className="text-xs">
+                CC BY-NC-ND 4.0
               </ExternalLink>
             </div>
             <div className="text-xs">

@@ -16,7 +16,11 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
   },
   "engines": {
     "node": ">=18.17.0"
@@ -39,6 +43,7 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@types/next": "^9.0.0",
     "@types/node": "^25.0.3",
     "@types/react": "^18.3.27",
